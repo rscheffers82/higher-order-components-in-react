@@ -1,15 +1,15 @@
 {
-  "name": "redux-simple-starter",
+  "name": "higher-order-components",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Personal project to explore HOCs with react and redux",
   "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": "git@github.com:rscheffers82/hocs.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "",
+  "author": "Roy Scheffers",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.2.1",
