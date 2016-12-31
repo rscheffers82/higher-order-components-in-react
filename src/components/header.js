@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 class Header extends Component {
+  // constructor(props) {
+  //   super(props);
+  //
+  // }
   authButton() {
-    return <button>Login</button>;
+    if ( this.props.authenticated ) {
+      return <button onClick={() => this.props.authenticate(false)}>Logout</button>
+    }
+    return <button onClick={() => this.props.authenticate(true)}>Login</button>;
   }
 
   render() {
@@ -25,4 +34,10 @@ class Header extends Component {
   }
 }
 
-export default Header
+// the below returned object (from our reducer) will show up in the header component as props
+
+function mapStateToProps(state) {
+  return { authenticated: state.authenticated }
+}
+
+export default connect(mapStateToProps, actions)(Header);
