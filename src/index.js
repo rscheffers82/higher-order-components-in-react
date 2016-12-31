@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import {Router, Route, browserHistory } from 'react-router';
 
+// requireAuth is a function our HOC, when passed a component it will return a component
+import requireAuth from './components/require_authentication'
 import App from './components/app';
 import Resources from './components/resources';
 
@@ -15,7 +17,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>
-        <Route path="resources" component={Resources} />
+        <Route path="resources" component={requireAuth(Resources)} />
       </Route>
     </Router>
   </Provider>
