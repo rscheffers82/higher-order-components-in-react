@@ -1,0 +1,25 @@
+body {
+  background-color: #fafaff !important;
+  font-size: 1.1rem !important;
+}
+
+h3 {
+  padding-bottom: 2rem;
+  font-size: 1.6rem;
+}
+
+.home,
+.resources-box {
+  background-color: #fff;
+  margin: 3rem 0;
+  border: 1px solid #555;
+  padding: 3rem;
+}
+
+p img {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: inherit;
+  padding: 1rem 0;
+}

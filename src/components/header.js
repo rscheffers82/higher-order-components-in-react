@@ -17,7 +17,7 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-light">
+      <nav className="navbar navbar-default">
         <ul className="nav navbar-nav">
           <li className="nav-item">
             <Link to="/">Home</Link>
